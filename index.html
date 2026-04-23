@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jeu Concours - Avisclic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <img id="logo" src="" alt="Logo" class="client-logo">
+            <h1 id="business-name">Chargement...</h1>
+        </header>
+
+        <main>
+            <div class="wheel-box">
+                <div class="pointer"></div>
+                <div id="wheel" class="wheel"></div>
+            </div>
+            
+            <p class="instruction">Tentez de gagner l'un des 6 cadeaux !</p>
+            <button id="action-btn" class="btn-primary">Tenter ma chance</button>
+        </main>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="icon-gift">🎁</div>
+            <h2>Débloquez votre lancer</h2>
+            <p>Pour participer et découvrir votre cadeau, laissez-nous un avis 5 étoiles sur Google !</p>
+            <a id="google-link" href="#" target="_blank" class="btn-google">Laisser mon avis & jouer</a>
+            <button class="btn-close" onclick="closeModal()">Plus tard</button>
+        </div>
+    </div>
+
+    <div id="win-modal" class="modal-overlay">
+        <div class="modal-card win-card">
+            <h2>Félicitations ! 🎉</h2>
+            <div class="prize-display" id="prize-name"></div>
+            <p class="security-code" id="security-info"></p>
+            <p class="disclaimer">Montrez cet écran au personnel pour valider votre gain.</p>
+            <button class="btn-primary" onclick="location.reload()">Fermer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
