@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Jeu - Avisclic</title>
+    <title>Jeu Cadeau</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="app-container">
-        <header>
-            <img id="logo" src="" alt="" class="client-logo">
-            <h1 id="business-name"></h1>
-        </header>
+        <img id="logo" src="" alt="" class="client-logo">
+        <h1 id="business-name">Chargement...</h1>
 
         <div class="wheel-box">
             <div class="pointer"></div>
@@ -19,15 +17,17 @@
         </div>
         
         <p class="instruction">Tentez de gagner l'un des 6 cadeaux !</p>
-        <button id="action-btn" class="btn-primary" onclick="handleMainAction()">Tenter ma chance</button>
+        <button id="action-btn" class="btn-primary">Tenter ma chance</button>
+        
+        <button id="reset-test" style="display:none; margin-top:10px; font-size:10px; opacity:0.5;">Vider Cache Test</button>
     </div>
 
     <div id="modal" class="modal-overlay">
         <div class="modal-card">
             <h2>Débloquez votre lancer 🎁</h2>
             <p>Partagez votre expérience avec nous pour déverrouiller la roue et découvrir votre surprise !</p>
-            <a id="google-link" href="#" target="_blank" class="btn-google" onclick="unlockWheel()">Exprimer mon soutien & jouer</a>
-            <button class="btn-close" onclick="closeModal()">Plus tard</button>
+            <a id="google-link" href="#" target="_blank" class="btn-google">Exprimer mon soutien & jouer</a>
+            <button class="btn-close" id="close-modal-btn">Plus tard</button>
         </div>
     </div>
 
@@ -36,8 +36,8 @@
             <h2>Félicitations ! 🎉</h2>
             <div id="prize-name" style="font-size: 2rem; font-weight: bold; color: #27ae60; margin: 20px 0;"></div>
             <p id="security-info" style="font-size: 0.8rem; background: #eee; padding: 10px; border-radius: 5px;"></p>
-            <p style="font-size: 0.8rem; color: #666;">Montrez cet écran au personnel pour valider votre gain.</p>
-            <button class="btn-primary" onclick="location.reload()">Fermer</button>
+            <p style="font-size: 0.7rem; color: #666;">Montrez cet écran au personnel pour valider votre gain.</p>
+            <button class="btn-primary" onclick="window.location.reload()">Fermer</button>
         </div>
     </div>
 
