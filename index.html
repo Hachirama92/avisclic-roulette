@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Le Jeu Cadeau - Avisclic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <img id="logo" src="" alt="" class="client-logo">
+            <h1 id="business-name">Chargement...</h1>
+        </header>
+
+        <div class="wheel-section">
+            <div class="wheel-box">
+                <div class="pointer"></div>
+                <div id="wheel" class="wheel"></div>
+            </div>
+            <p class="instruction">Tentez de gagner l'un des 6 cadeaux !</p>
+        </div>
+
+        <footer>
+            <button id="action-btn" class="btn-primary">Tenter ma chance</button>
+        </footer>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="icon-gift">🎁</div>
+            <h2>Débloquez votre lancer</h2>
+            <p>Partagez votre expérience avec nous pour déverrouiller la roue et découvrir votre surprise !</p>
+            <a id="google-link" href="#" target="_blank" class="btn-google">Donner de la force & jouer</a>
+            <button class="btn-close" onclick="closeModal()">Plus tard</button>
+        </div>
+    </div>
+
+    <div id="win-modal" class="modal-overlay">
+        <div class="modal-card win-card">
+            <h2>Félicitations ! 🎉</h2>
+            <div class="prize-display" id="prize-name"></div>
+            <div class="security-info">
+                <p id="security-date"></p>
+                <p class="disclaimer">Présentez cet écran pour valider votre gain.</p>
+            </div>
+            <button class="btn-primary" onclick="location.reload()">Fermer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
